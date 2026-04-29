@@ -1,0 +1,29 @@
+# Secrets
+.env
+.env.*
+*.key
+*.pem
+secrets.*
+
+# Private client work
+clients/
+client-*/
+test-*/
+outputs/
+generated_images/
+
+# Generated media
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.mp4
+*.mov
+*.webp
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
