@@ -6,11 +6,12 @@
 secrets.*
 
 # Private client work
-clients/
-client-*/
-test-*/
-outputs/
-generated_images/
+/clients/
+/client-*/
+/test-*/
+/outputs/
+/generated_images/
+/examples/
 
 # Generated media
 *.png
@@ -26,4 +27,3 @@ generated_images/
 Thumbs.db
 .vscode/
 .idea/
-
