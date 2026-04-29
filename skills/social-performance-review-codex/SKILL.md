@@ -18,6 +18,12 @@ Accept:
 - Previous `context/best-performers.md`
 - `context/content-calendar.md`
 
+Optional sources:
+
+- Scheduling tool exports from Blotato, Buffer, Later, Metricool, or Hootsuite.
+- Native platform exports from Instagram, LinkedIn, Facebook, TikTok, Threads, X, or YouTube.
+- Manually maintained reporting spreadsheets.
+
 ## Metrics
 
 Use available metrics only. Common fields:
@@ -31,6 +37,14 @@ Use available metrics only. Common fields:
 - Clicks
 - Follows
 - Leads or conversions
+
+Recommended CSV columns when the user can choose an export format:
+
+```text
+date, platform, post name, format, topic, reach, impressions,
+engagements, engagement rate, saves, shares, comments, clicks,
+follows, conversions, post URL, media file
+```
 
 Normalize comparisons by platform. Do not compare Instagram reach directly with LinkedIn impressions as if they mean the same thing. If data is incomplete, state the limitation and focus on directional patterns.
 

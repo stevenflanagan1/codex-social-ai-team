@@ -179,6 +179,8 @@ python scripts/make_loop.py --frames outputs/motion/[slug]/frames --output outpu
 
 If `python` is not available, use the bundled Codex Python runtime if present.
 
+MP4 export may need FFmpeg or a Python runtime with video encoding support. If MP4 export is unavailable, produce the ordered frames and a GIF preview, then note that MP4 export is pending local video tooling.
+
 For subtle video-like motion from one image:
 
 ```powershell

@@ -24,6 +24,16 @@ Gather:
 
 If URLs are provided and browsing is available, collect evidence from the website and public social profiles. If browsing is not available, ask for pasted examples or screenshots.
 
+## Optional Research Tools
+
+Use available tools conservatively:
+
+- Firecrawl: extract clean website copy, service pages, product pages, blogs, and competitor pages.
+- Playwright MCP: inspect live pages, screenshots, visual brand cues, forms, and navigation.
+- Browser/search tools: gather public profile context when allowed.
+
+If none are configured, ask the user for pasted website copy, screenshots, example posts, or brand documents. Do not block onboarding just because research tooling is missing.
+
 ## Output
 
 Create `context/brand-style.md`:
@@ -80,4 +90,3 @@ Bad examples:
 ```
 
 Also create `context/compliance-rules.md` and `context/asset-library.md` if enough information is available.
-

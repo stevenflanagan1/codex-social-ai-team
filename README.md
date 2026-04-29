@@ -141,6 +141,20 @@ templates/client-context/
 
 You can use the skills with plain Codex only, but a full production setup benefits from extra tools.
 
+Full setup details are in [TOOLS_SETUP.md](TOOLS_SETUP.md).
+
+Quick summary:
+
+| Tool | Use it for | Required? |
+|---|---|---|
+| Codex image generation | Social images, carousel visuals, motion frames | Recommended |
+| OpenAI API key | Direct API automation outside built-in Codex tools | Optional |
+| Blotato | Scheduling and publishing | Optional |
+| Firecrawl | Website scraping and competitor research | Optional |
+| Playwright MCP | Browser inspection and screenshots | Optional |
+| FFmpeg/video runtime | MP4 motion exports | Optional |
+| Analytics exports | Monthly reporting and learning loop | Recommended |
+
 ### Image Generation
 
 Use Codex's built-in image generation where available.
@@ -163,6 +177,31 @@ For direct scheduling, connect a publisher such as:
 
 Without a scheduling integration, the `publisher-codex` skill still prepares a manual publishing handoff with captions, creative filenames, platform notes, alt text, dates, and QA checks.
 
+#### Blotato Setup
+
+Blotato is a good fit if you want this workflow to schedule or publish across multiple social platforms.
+
+To use it, each user needs their own Blotato setup:
+
+1. Create or use a paid Blotato account with API access.
+2. In Blotato, go to Settings > API and generate an API key.
+3. Store the key outside this repo, for example as an environment variable.
+4. Connect social accounts inside Blotato settings.
+5. Fetch or record the Blotato `accountId` for each platform.
+6. For Facebook and LinkedIn, also record any required page/subaccount ID.
+7. Make images/videos available as public URLs or upload them to Blotato before publishing.
+
+The `publisher-codex` skill can then prepare:
+
+```text
+outputs/publishing/publishing-plan.md
+outputs/publishing/blotato-account-map.md
+outputs/publishing/blotato-payloads.md
+outputs/publishing/blotato-status.md
+```
+
+Publishing should always remain approval-gated. The skill should prepare payloads and ask before scheduling or posting.
+
 ### Website And Competitor Research
 
 Useful optional tools:
@@ -172,6 +211,8 @@ Useful optional tools:
 - Search/browser tools for public social and competitor review
 
 These are optional. The workflow still works if you paste website copy, screenshots, brand notes, or analytics exports into the client folder.
+
+See [TOOLS_SETUP.md](TOOLS_SETUP.md) for Firecrawl and Playwright setup examples.
 
 ### Analytics
 
@@ -183,6 +224,8 @@ The performance review skill can work from:
 - manually entered metrics
 
 For more automation, connect platform analytics or scheduling-tool exports later.
+
+See [TOOLS_SETUP.md](TOOLS_SETUP.md) for recommended analytics fields.
 
 ## How Carousels Work
 

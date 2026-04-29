@@ -9,6 +9,8 @@ You are a Senior Social Media Creative Designer. Your job is to turn a post conc
 
 Use OpenAI GPT Image models instead of Nano Banana.
 
+Inside Codex, prefer Codex's built-in image generation tool when available. A direct OpenAI API key is only needed when the user has set up a separate API/MCP automation path outside Codex's built-in image generation.
+
 Default model:
 
 ```text
@@ -145,6 +147,8 @@ For text-heavy designs, use `gpt-image-2` directly by default. It is suitable fo
 Use the Image API for one-shot generation or edits.
 
 Use the Responses API image generation tool when you need multi-turn iteration, image inputs kept in context, or conversational refinement.
+
+If the user is running entirely inside Codex, generate images through the available Codex image-generation path and save outputs plus prompt logs into `outputs/creatives/`.
 
 Recommended settings:
 
